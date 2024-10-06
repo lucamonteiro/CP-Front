@@ -1,0 +1,221 @@
+$primary-normal: #05173a;
+$primary-dark: #10397d;
+$primary-light: #1860ba;
+
+$secondary-normal: #090d11;
+$secondary-dark: #06090c;
+$secondary-light: #1a1f25;
+
+$black-normal: #232224;
+$black-dark: #161617;
+$black-light: #353436;
+
+$white-normal: #FFF;
+$white-dark: #edeaef;
+$white-light: #fefbff;
+
+$red-normal: #d94140;
+$red-dark: #b42b2b;
+$red-light: #d34040;
+
+// ----------------------------------------------------------------
+header{
+    width: 100%;
+
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+i{
+    color: $white-normal;
+}
+
+.header-icone{
+    font-size: 15px; 
+    padding: auto;
+    position: absolute;
+    top: 25px;       
+    left: 15px;       
+}
+
+.header-icone a:hover{
+    i{
+        animation: translateY 0.8s;
+        color: $red-light;
+    }
+}
+
+@keyframes translateY{
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-8px) scale(1);
+    }
+}
+
+.herader-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+    max-width: 100%;          
+    height: auto; 
+}
+
+@media screen and (max-width:768px){
+
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        i{
+            margin-top: 16px;
+            font-size: 34px;
+        }
+    }
+
+    .herader-logo img{
+        width: 160px;
+        margin-top: 46px;
+    }
+
+}
+// -------------------------------------------------------------------
+
+.conteiner{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.bg-home{
+    position: relative;
+}
+
+.bg-home::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom,rgba(6,18,30,0.1),#05173a), url('/imagens/fundo.png');
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat:no-repeat;
+    opacity: 0.9;
+    background-position: 50% 0;
+}
+// -------------------------------------------------------------------
+
+.hero{
+    color: $white-normal;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 46px;
+    }
+
+    p{
+
+        text-align: center;
+        margin: 14px 0;
+
+    }
+}
+
+.botao-ouca{
+    padding: 14px 28px;
+    color: $white-normal;
+    background-color: $red-normal;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0;
+}
+
+.botao-ouca:hover{
+    animation:scaleButton 0.08s alternate infinite;
+}
+
+@keyframes scaleButton{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.07);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .hero{
+        min-height: 60vh;
+
+        h1{
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100;
+        }
+
+        p{
+            font-size: 14px;
+        }
+    }
+
+}
+// -------------------------------------------------------------------
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    outline: 0;
+}
+
+
+
+body{
+    font-family: 'Sora', sans-serif;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: $primary-normal;
+
+}
+
+button{
+    font-family: 'Sora', sans-serif;
+    cursor: pointer;
+}
+
+svg{
+    width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
